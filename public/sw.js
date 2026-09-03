@@ -1,3 +1,10 @@
+/**
+ * @file Service Worker for MikroTik Monitor PWA
+ * @description Handles offline caching and resource management.
+ * @author fsdevcom2000
+ * @url https://github.com/fsdevcom2000/mikrotik-monitor
+ */
+
 const CACHE_NAME = "mikrotik-monitor-v1";
 
 const STATIC_ASSETS = [
