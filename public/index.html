@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    >
+
+    <meta
+        name="description"
+        content="Router status"
+    >
+
+    <title>MikroTik Monitor</title>
+    <link
+    rel="manifest"
+    href="/manifest.webmanifest"
+    >
+    
+    <!-- iOS -->
+
+    <link
+        rel="apple-touch-icon"
+        href="/icons/apple-touch-icon.png"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="default"
+    >
+
+    <meta
+        name="apple-mobile-web-app-title"
+        content="WhiteCheck"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header class="header">
+
+            <h1>MikroTik Monitor</h1>
+
+            <p>
+                Router status
+            </p>
+
+        </header>
+
+
+        <section
+            id="status"
+            class="card status offline"
+        >
+
+            <div
+                id="statusIcon"
+                class="status-icon"
+            >
+                ✕
+            </div>
+
+
+            <div
+                id="statusTitle"
+                class="status-title"
+            >
+                OFFLINE
+            </div>
+
+
+            <div
+                id="statusSubtitle"
+                class="status-subtitle"
+            >
+                No heartbeat from router
+            </div>
+
+
+            <div class="info">
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Last heartbeat
+                    </span>
+
+                    <span
+                        id="lastSeen"
+                        class="info-value"
+                    >
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Signal age
+                    </span>
+
+                    <span
+                        id="age"
+                        class="info-value"
+                    >
+                        —
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Heartbeat interval
+                    </span>
+
+                    <span class="info-value">
+                        30 seconds
+                    </span>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span class="info-label">
+                        Timeout
+                    </span>
+
+                    <span class="info-value">
+                        90 seconds
+                    </span>
+
+                </div>
+                <div class="info-row">
+
+                <span class="info-label">
+                    Last check
+                </span>
+
+                <span
+                    id="checked"
+                    class="info-value"
+                >
+                    —
+                </span>
+
+            </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+
+            <span class="pulse"></span>
+
+            <span>
+                Automatic check
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
