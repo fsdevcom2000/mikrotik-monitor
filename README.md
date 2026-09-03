@@ -1,3 +1,7 @@
+# [Русский](#русский) / [English](#english)
+
+## English
+
 # MikroTik Monitor
 
 Monitoring the availability of a **MikroTik** router using **Cloudflare Workers, KV Storage, and PWA**.
@@ -755,8 +759,8 @@ Minimal infrastructure, no incoming connections, and the ability to install the 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-# MikroTik Monitor
+## Русский
+# MikroTik монитор
 
 Мониторинг доступности роутера **MikroTik** с использованием **Cloudflare Workers, KV Storage и PWA**.
 
