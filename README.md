@@ -10,10 +10,6 @@ The router independently sends a heartbeat request to the Cloudflare Worker over
 
 The project does not require opening any incoming ports on the MikroTik router.
 
-For a single MikroTik router, the project stays within the Cloudflare Workers Free plan limits.
-
-The router sends a heartbeat every 30 seconds (2,880 requests/day). KV writes are limited to one update every 2 minutes, resulting in approximately 720 KV writes/day.
-
 ---
 
 ## Features
@@ -758,11 +754,29 @@ PWA
 Minimal infrastructure, no incoming connections, and the ability to install the interface as a mobile application.
 
 ---
+
+# Limits
+
+For a single MikroTik router, the project stays within the Cloudflare Workers Free plan limits.
+
+The router sends a heartbeat every 30 seconds (2,880 requests/day). KV writes are limited to one update every 2 minutes, resulting in approximately 720 KV writes/day.
+
+| Operation       |  Per day | Free limit |
+| --------------- | -------: | ---------: |
+| Worker requests | ~20,160* |    100,000 |
+| KV reads        | ~20,160* |    100,000 |
+| KV writes       |     ~720 |      1,000 |
+
+* Based on one router and one continuously open monitoring page. The router sends a heartbeat every 30 seconds, while the web interface checks the status every 5 seconds.
+
+---
+
 # License 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
+
 ## Русский
 # MikroTik монитор
 
@@ -771,10 +785,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 Роутер самостоятельно отправляет heartbeat-запрос на Cloudflare Worker через HTTPS. Worker сохраняет время последнего сигнала в Cloudflare KV. Веб-интерфейс периодически получает статус и показывает, находится ли роутер онлайн.
 
 Проект не требует открытия входящих портов на роутере MikroTik.
-
-Для одного MikroTik роутера проект укладывается в лимиты бесплатного тарифа Cloudflare Workers.
-
-Роутер отправляет heartbeat каждые 30 секунд (2 880 запросов/сутки). Запись в KV выполняется не чаще одного раза в 2 минуты, что составляет примерно 720 записей KV в сутки.
 
 ---
 
@@ -1526,6 +1536,23 @@ PWA
 Минимальная инфраструктура, отсутствие входящих соединений и возможность установки интерфейса как мобильного приложения.
 
 ---
+
+# Ограничения
+
+Для одного MikroTik роутера проект укладывается в лимиты бесплатного тарифа Cloudflare Workers.
+
+Роутер отправляет heartbeat каждые 30 секунд (2 880 запросов/сутки). Запись в KV выполняется не чаще одного раза в 2 минуты, что составляет примерно 720 записей KV в сутки.
+
+| Операция       |  В сутки | Бесплатный лимит |
+| -------------- | -------: | ---------------: |
+| Запросы Worker | ~20 160* |          100 000 |
+| Чтение KV      | ~20 160* |          100 000 |
+| Запись KV      |     ~720 |            1 000 |
+
+* Расчёт для одного роутера и одной постоянно открытой страницы мониторинга. Роутер отправляет heartbeat каждые 30 секунд, а веб-интерфейс проверяет статус каждые 5 секунд.
+  
+---
+
 # Лицензия
 
 Этот проект распространяется под лицензией MIT. Подробные условия лицензии приведены в файле [LICENSE](LICENSE).
