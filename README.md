@@ -10,6 +10,10 @@ The router independently sends a heartbeat request to the Cloudflare Worker over
 
 The project does not require opening any incoming ports on the MikroTik router.
 
+For a single MikroTik router, the project stays within the Cloudflare Workers Free plan limits.
+
+The router sends a heartbeat every 30 seconds (2,880 requests/day). KV writes are limited to one update every 2 minutes, resulting in approximately 720 KV writes/day.
+
 ---
 
 ## Features
@@ -96,9 +100,9 @@ The project does not require opening any incoming ports on the MikroTik router.
     
 6. The Worker returns the time of the last heartbeat.
     
-7. If the last heartbeat was received less than 90 seconds ago, the router is considered `ONLINE`.
+7. If the last heartbeat was received less than 180 seconds ago, the router is considered `ONLINE`.
     
-8. If no heartbeat has been received for more than 90 seconds, the router is considered `OFFLINE`.
+8. If no heartbeat has been received for more than 180 seconds, the router is considered `OFFLINE`.
     
 
 ---
@@ -768,6 +772,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Проект не требует открытия входящих портов на роутере MikroTik.
 
+Для одного MikroTik роутера проект укладывается в лимиты бесплатного тарифа Cloudflare Workers.
+
+Роутер отправляет heartbeat каждые 30 секунд (2 880 запросов/сутки). Запись в KV выполняется не чаще одного раза в 2 минуты, что составляет примерно 720 записей KV в сутки.
+
 ---
 
 ## Возможности
@@ -854,9 +862,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
     
 6. Worker возвращает время последнего heartbeat.
     
-7. Если последний heartbeat был менее 90 секунд назад — роутер считается `ONLINE`.
+7. Если последний heartbeat был менее 180 секунд назад — роутер считается `ONLINE`.
     
-8. Если heartbeat отсутствует более 90 секунд — роутер считается `OFFLINE`.
+8. Если heartbeat отсутствует более 180 секунд — роутер считается `OFFLINE`.
     
 
 ---
