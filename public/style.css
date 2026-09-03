@@ -1,3 +1,11 @@
+/**
+ * @file MikroTik Monitor - Stylesheet
+ * @description UI styles for the PWA web interface.
+ * @author fsdevcom2000
+ * @url https://github.com/fsdevcom2000/mikrotik-monitor
+ * @license MIT
+ */
+
 * {
 	box-sizing: border-box;
 }
