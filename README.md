@@ -654,7 +654,7 @@ The following values are used by default:
 |MikroTik heartbeat|30 sec|
 |Frontend check|5 sec|
 |Local counter|1 sec|
-|Offline timeout|90 sec|
+|Offline timeout|180 sec|
 
 Heartbeat:
 
@@ -1437,7 +1437,7 @@ const CACHE_NAME = "mikrotik-monitor-v2";
 | Heartbeat MikroTik |   30 сек |
 | Проверка фронтенд  |    5 сек |
 | Локальный счётчик  |    1 сек |
-| Offline таймаут    |   90 сек |
+| Offline таймаут    |   180 сек |
 
 Heartbeat:
 
