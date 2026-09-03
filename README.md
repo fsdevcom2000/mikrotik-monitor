@@ -468,13 +468,13 @@ Expected result:
 The Worker uses:
 
 ```typescript
-const OFFLINE_TIMEOUT = 90_000;
+const OFFLINE_TIMEOUT = 180_000;
 ```
 
 This means:
 
 ```text
-90 000 ms = 90 seconds
+180 000 ms = 180 seconds
 ```
 
 With a heartbeat interval of 30 seconds, the system allows one or more missed requests.
@@ -484,9 +484,9 @@ Logic:
 ```text
 Heartbeat every 30 seconds
         │
-        ├── < 90 sec → ONLINE
+        ├── < 180 sec → ONLINE
         │
-        └── >= 90 sec → OFFLINE
+        └── >= 180 sec → OFFLINE
 ```
 
 If necessary, the value can be changed in:
@@ -498,10 +498,10 @@ src/index.ts
 For example:
 
 ```typescript
-const OFFLINE_TIMEOUT = 120_000;
+const OFFLINE_TIMEOUT = 360_000;
 ```
 
-for a 120-second timeout.
+for a 360-second timeout.
 
 ---
 
@@ -1232,13 +1232,13 @@ Authorization: Bearer YOUR_TOKEN
 В Worker используется:
 
 ```typescript
-const OFFLINE_TIMEOUT = 90_000;
+const OFFLINE_TIMEOUT = 180_000;
 ```
 
 Это означает:
 
 ```text
-90 000 ms = 90 секунд
+180 000 ms = 180 секунд
 ```
 
 При heartbeat каждые 30 секунд система допускает пропуск одного или нескольких запросов.
@@ -1248,9 +1248,9 @@ const OFFLINE_TIMEOUT = 90_000;
 ```text
 Heartbeat каждые 30 сек
         │
-        ├── < 90 сек → ONLINE
+        ├── < 180 сек → ONLINE
         │
-        └── >= 90 сек → OFFLINE
+        └── >= 180 сек → OFFLINE
 ```
 
 При необходимости значение можно изменить в:
@@ -1262,10 +1262,10 @@ src/index.ts
 Например:
 
 ```typescript
-const OFFLINE_TIMEOUT = 120_000;
+const OFFLINE_TIMEOUT = 360_000;
 ```
 
-для таймаута 120 секунд.
+для таймаута 360 секунд.
 
 ---
 
