@@ -121,6 +121,7 @@ mikrotik-monitor/
 │   └── icons/
 │       ├── icon-192.png
 │       └── icon-512.png
+|		└── apple-touch-icon.png
 │
 ├── .gitignore
 ├── README.md
@@ -897,6 +898,7 @@ mikrotik-monitor/
 │   └── icons/
 │       ├── icon-192.png
 │       └── icon-512.png
+|		└── apple-touch-icon.png
 │
 ├── .gitignore
 ├── README.md
