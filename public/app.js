@@ -5,6 +5,7 @@
  * @url https://github.com/fsdevcom2000/mikrotik-monitor
  * @license MIT
  */
+
 const UPDATE_INTERVAL = 5000;
 const COUNTER_INTERVAL = 1000;
 
@@ -132,7 +133,7 @@ function renderStatus() {
 
 
 	const online =
-		age < 90000;
+    currentOnline;
 
 
 	currentOnline = online;

@@ -11,8 +11,8 @@ interface Env {
 	HEARTBEAT_TOKEN: string;
 }
 
-const OFFLINE_TIMEOUT = 90_000; // 90 sec
-
+const KV_WRITE_INTERVAL = 120_000; // 2 min
+const OFFLINE_TIMEOUT = 180_000; // 3 min
 
 interface RouterStatus {
 	lastSeen: number;
@@ -51,14 +51,26 @@ export default {
 
 			const now = Date.now();
 
-			const status: RouterStatus = {
-				lastSeen: now
-			};
+			const current =
+				await env.ROUTER_STATUS.get(
+					"mikrotik",
+					"json"
+				) as RouterStatus | null;
 
-			await env.ROUTER_STATUS.put(
-				"mikrotik",
-				JSON.stringify(status)
-			);
+			// Update KV only once every 2 minutes.
+			if (
+				!current ||
+				now - current.lastSeen >= KV_WRITE_INTERVAL
+			) {
+				const status: RouterStatus = {
+					lastSeen: now
+				};
+
+				await env.ROUTER_STATUS.put(
+					"mikrotik",
+					JSON.stringify(status)
+				);
+			}
 
 			return Response.json({
 				ok: true,
@@ -104,3 +116,4 @@ export default {
 		});
 	}
 } satisfies ExportedHandler<Env>;
+
