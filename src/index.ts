@@ -1,3 +1,11 @@
+/**
+ * @file MikroTik Monitor - Cloudflare Worker Backend
+ * @description Handles router heartbeats and exposes status API.
+ * @author fsdevcom2000
+ * @url https://github.com/fsdevcom2000/mikrotik-monitor
+ * @license MIT
+ */
+
 interface Env {
 	ROUTER_STATUS: KVNamespace;
 	HEARTBEAT_TOKEN: string;
