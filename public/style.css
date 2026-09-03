@@ -182,31 +182,6 @@ body {
 	text-align: right;
 }
 
-.footer {
-	display: flex;
-
-	align-items: center;
-	justify-content: center;
-
-	gap: 7px;
-
-	margin-top: 18px;
-
-	color: #64748b;
-
-	font-size: 12px;
-}
-
-.pulse {
-	width: 8px;
-	height: 8px;
-
-	border-radius: 50%;
-
-	background: #22c55e;
-
-	animation: pulse 2s infinite;
-}
 
 @keyframes pulse {
 
@@ -240,4 +215,58 @@ body {
 	.info-row {
 		font-size: 13px;
 	}
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+.footer {
+	margin-top: 32px;
+	padding-top: 18px;
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+
+	font-size: 13px;
+	color: #64748b;
+}
+
+.footer-status {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.footer-separator {
+	color: #475569;
+}
+
+.footer-copyright,
+.footer-license {
+	white-space: nowrap;
+}
+
+/* Green activity indicator */
+.footer .pulse {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #22c55e;
+	box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+	animation: pulse 2s infinite;
+}
+
+.footer a {
+	color: #64748b;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.footer a:hover {
+	color: #94a3b8;
 }
