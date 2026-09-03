@@ -1,3 +1,10 @@
+/**
+ * @file MikroTik Monitor - Frontend Application
+ * @description Periodic status checker and PWA interface.
+ * @author fsdevcom2000
+ * @url https://github.com/fsdevcom2000/mikrotik-monitor
+ * @license MIT
+ */
 const UPDATE_INTERVAL = 5000;
 const COUNTER_INTERVAL = 1000;
 
