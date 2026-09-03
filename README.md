@@ -1,5 +1,3 @@
-<img width="722" height="884" alt="Screenshot 2026-09-03 102444" src="https://github.com/user-attachments/assets/776ac4b6-1809-4c8e-949f-acc99e3bba2d" />
-
 # MikroTik Monitor
 
 Monitoring the availability of a **MikroTik** router using **Cloudflare Workers, KV Storage, and PWA**.
